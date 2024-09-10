@@ -1,0 +1,85 @@
+
+Problem Statement
+Write a Python function that counts the frequency of each word in a given paragraph. The function should return the result as a dictionary. Additionally, provide a way to retrieve the most frequently occurring word(s) from this dictionary
+ 
+input_paragraph = "Hello world Hello world This world is full of surprises Surprises are everywhere; surprises are fun"
+
+ 
+{
+
+    'hello': 2,
+
+    'world': 3,
+
+    'this': 1,
+
+    'is': 1,
+
+    'full': 1,
+
+    'of': 1,
+
+    'surprises': 3,
+
+    'are': 3,
+
+    'everywhere': 1,
+
+    'fun': 1
+
+}
+
+Most frequent word(s): ['world', 'surprises']
+
+#solution 
+
+from utility import generate_dict
+from utility import  count_freq
+
+if __name__ == '__main__':
+    input_paragraph = 'Hello world Hello world This world is full of surprises Surprises are everywhere surprises are fun'
+    input_paragraph  = input_paragraph.lower()
+    words1 = input_paragraph.split()
+    print("after converting para  into list of word\n ", words1)
+    Dic_para = generate_dict(words1)
+    print(" dictionary of paragraph",Dic_para)
+    count_freq(Dic_para)
+
+
+
+
+#inside utility function
+
+def generate_dict(ll):
+    d = {}
+    count = 0
+    for x in ll:
+        if x in d:
+            d[x] = d[x] + 1
+        else:
+            d[x] = 1
+    return(d)
+
+def count_freq(dictnum):
+    max_list = {}
+    max = list(dictnum.values())[0]
+    for x in dictnum:
+        if max < dictnum[x]:
+            max = dictnum[x]
+    for  x in dictnum:
+        if dictnum[x] == max :
+            max_list[x] = max
+    print(max_list)
+
+
+
+
+
+
+
+#output 
+{'world': 3, 'surprises': 3}
+
+
+
+ 
