@@ -1,0 +1,15 @@
+Remove Duplicates from a List
+Write a Python function to remove duplicates from a list while preserving the order.
+Input: [1, 2, 2, 3, 4, 4, 5]
+Output: [1, 2, 3, 4, 5]
+
+
+input = [1, 2, 2, 3, 4, 4, 5]
+
+uniq_x = []
+for x in input:
+    if(x not in uniq_x):
+        uniq_x.append(x)
+print(uniq_x)
+
+output: [1, 2, 3, 4, 5]

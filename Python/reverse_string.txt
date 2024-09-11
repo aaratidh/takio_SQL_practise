@@ -1,0 +1,19 @@
+problem statement: 
+Write a Python function to reverse a given string.
+Input: "hello"
+Output: "olleh"
+
+
+
+input = "hello"
+length = len(input)
+revstr = ""
+while length> 0:
+     length = length - 1
+     revstr = revstr + input[length]
+
+print(revstr)
+
+
+
+Output: olleh
