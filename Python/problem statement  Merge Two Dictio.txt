@@ -1,0 +1,16 @@
+problem statement:  Merge Two Dictionaries
+Write a Python function to merge two dictionaries.
+
+
+
+input1 =  {'a': 1, 'b': 2}
+input2 =  {'b': 3, 'c': 4}
+
+merg_dict ={}
+for x ,y in input1, input2 :
+    merg_dict[x] =  input1[x]
+    merg_dict[y] = input2[y]
+
+print(merg_dict)
+
+Output: {'a': 1, 'b': 2, 'c': 4}

@@ -1,0 +1,27 @@
+Problem Statement
+
+#Write a Python function to perform basic string compression using the counts of repeated characters.
+
+Input = "aabcccccaaa"
+
+
+
+list = []
+count = 0
+for i in range(len(Input)):
+    if i  ==0 :
+        count = 1
+        list.append(Input[i])
+    elif Input[i] == Input[i-1]:
+            count = count +1
+    else:
+        list.append(count)
+        list.append(Input[i])
+        count = 1
+
+list.append(count)
+strg = ("".join(str(x) for x in list))
+print(strg)
+
+
+#Output: "a2b1c5a3"

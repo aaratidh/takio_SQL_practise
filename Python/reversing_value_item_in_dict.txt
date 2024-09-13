@@ -1,0 +1,12 @@
+#Write a Python function to invert a dictionary (swap keys and values).
+
+Input = {'a': 1, 'b': 2, 'c': 3}
+
+
+swap_dict = {}
+for x in Input:
+    swap_dict[Input[x]] = x
+
+ print(swap_dict)
+
+Output: {1: 'a', 2: 'b', 3: 'c'}
