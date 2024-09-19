@@ -1,0 +1,24 @@
+6. Find the First Non-Repeating Character
+Write a Python function to find the first non-repeating character in a given string and return its index.
+Input: "swiss"
+
+
+Solution: 
+input = "swiiss"
+list_char = list(input)
+print(list_char)
+cont_char = {}
+for char in input:
+    if char not in cont_char:
+        cont_char[char]  =  1
+    else:
+        cont_char[char] = cont_char[char] + 1
+
+print(cont_char)
+
+for key , value in  cont_char.items():
+    if value == 1:
+        print(list_char.index(key))
+        break
+
+Output: 1 (for 'w' in "swiss")
