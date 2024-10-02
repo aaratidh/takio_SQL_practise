@@ -1,0 +1,27 @@
+problem statement:
+
+
+#Find All Pairs in a List that Sum to a Specific Value
+#Write a Python function to find all pairs in a list that sum to a specific value.
+
+Input= [1, 2, 3 , 3, 4, 5]
+Sum=6
+
+
+Solution
+
+read  = set()
+pair_list = []
+
+
+for x in Input:
+    diff = Sum - x
+    if diff  in read:
+        pair_list.append((min(x, diff), max(x, diff)))
+    read.add(x)
+
+
+print(pair_list)
+
+
+Output: [(1, 5), (2, 4)]
