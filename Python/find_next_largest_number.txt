@@ -1,0 +1,29 @@
+Problem: 
+The Next Greater Element problem requires finding, for each element in the array, the next element that is greater than the current element. If no such element exists for a given element, return -1.
+
+Problem Statement:
+Given an array of integers, for each element in the array, find the next greater element. If no such element exists, return -1 for that position.
+
+
+Solution: 
+input_arr = [4, 5, 2, 25]
+
+output  = []
+
+
+flag = 0
+for i in range(0 ,len(input_arr)):
+   flag = 0
+   for j in range( i+1,len(input_arr)):
+       if  input_arr[j]> input_arr[i]:
+           output.append(input_arr[j])
+           flag = 1
+           break
+   if flag ==0:
+       output.append(-1)
+
+print(output)
+
+
+Output: 
+#output [5, 25, 25, -1]
